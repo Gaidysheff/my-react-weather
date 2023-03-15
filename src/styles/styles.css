@@ -1,0 +1,25 @@
+@import "./AmaticSC-Regular.css";
+
+body {
+  font-family: "AmaticSC Regular", sans-serif;
+}
+
+h1 {
+  color: #9d0101;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 50px;
+  font-weight: 900;
+}
+
+#app {
+  background-color: #e9eaa8;
+}
+
+.logo {
+  background-image: url("../images/webpack.png");
+  background-size: cover;
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+}

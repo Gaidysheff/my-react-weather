@@ -1,0 +1,24 @@
+@use "./reset";
+
+@use "./variables";
+@use "./mixins";
+
+@use "./styles";
+@use "./component";
+
+@use "../../node_modules/sass-rem" as to;
+
+$border: to.rem(1px solid #ccc);
+
+.card {
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: rgb(43, 229, 239);
+  margin-top: 1rem;
+  border: $border;
+
+  h2 {
+    text-align: center;
+    color: rgb(231, 0, 243);
+  }
+}
