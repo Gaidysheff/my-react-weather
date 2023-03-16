@@ -47,14 +47,17 @@ const babelOptions = (preset) => {
   return opts;
 };
 
+const ESLintPlugin = require("eslint-webpack-plugin");
+
 module.exports = {
   mode: "development",
   entry: {
-    main: ["@babel/polyfill", "./src/index.jsx"],
+    main: ["@babel/polyfill", "./src/index.tsx"],
   },
   output: {
     filename: filename("js"),
     path: path.resolve(process.cwd(), "dist"),
+    publicPath: "/",
   },
   resolve: {
     extensions: [".js", ".jsx", ".json", ".ts", ".tsx", ".svg", ".png"],
@@ -78,6 +81,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: filename("css"),
     }),
+    new ESLintPlugin(),
   ],
 
   optimization: optimization(),
@@ -86,6 +90,7 @@ module.exports = {
     // static: "./dist",
     port: 3000,
     hot: isDev,
+    historyApiFallback: true,
   },
 
   module: {
@@ -120,13 +125,18 @@ module.exports = {
         },
       },
       {
-        test: /\.ts$/,
+        test: /\.tsx?$/,
+        use: "ts-loader",
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: babelOptions("@babel/preset-typescript"),
-        },
       },
+      // {
+      //   test: /\.ts$/,
+      //   exclude: /node_modules/,
+      //   use: {
+      //     loader: "babel-loader",
+      //     options: babelOptions("@babel/preset-typescript"),
+      //   },
+      // },
       {
         test: /\.jsx$/,
         exclude: /node_modules/,
