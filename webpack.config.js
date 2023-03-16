@@ -50,7 +50,7 @@ const babelOptions = (preset) => {
 module.exports = {
   mode: "development",
   entry: {
-    main: ["@babel/polyfill", "./src/index.tsx"],
+    main: ["@babel/polyfill", "./src/index.jsx"],
   },
   output: {
     filename: filename("js"),
