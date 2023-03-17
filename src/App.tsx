@@ -11,8 +11,7 @@ type Props = {};
 
 const App = (props: Props) => {
   return (
-    <div className="App">
-      <h1>Hello Weather</h1>;
+    <div className="container">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -73,7 +73,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "src/images/favicon.ico"),
+          from: path.resolve(__dirname, "src/assets/images/favicon.ico"),
           to: path.resolve(__dirname, "dist"),
         },
       ],
@@ -87,7 +87,6 @@ module.exports = {
   optimization: optimization(),
 
   devServer: {
-    // static: "./dist",
     port: 3000,
     hot: isDev,
     historyApiFallback: true,
@@ -108,7 +107,6 @@ module.exports = {
       {
         test: /\.(png|jp?g|svg|gif)$/i,
         type: "asset/resource",
-        // use: ["file-loader"],
       },
 
       {

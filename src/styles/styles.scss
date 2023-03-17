@@ -12,26 +12,11 @@ body {
   font-family: "Amatic SC", cursive;
 }
 
-.card {
-  padding: to.rem(5px);
-  border-radius: to.rem(5px);
-  background-color: rgb(43, 229, 239);
-  margin-top: 1rem;
-  border: $border;
-
-  h2 {
-    text-align: center;
-    color: rgb(231, 0, 243);
-  }
-}
-
-h1 {
-  // font-family: "Amatic SC", cursive;
-  font-size: 40px;
-  color: #df0000;
-  text-align: center;
-  padding: 50px 0;
-  font-weight: 700;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+  background-color: #f9d9d0;
 }
 
 #app {
