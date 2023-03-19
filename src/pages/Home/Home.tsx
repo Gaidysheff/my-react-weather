@@ -1,4 +1,5 @@
 import React from "react";
+import Days from "./components/Days/Days";
 import ThisDay from "./components/ThisDay/ThisDay";
 import ThisDayInfoLR from "./components/ThisDayInfo/ThisDayInfoLR";
 
@@ -13,6 +14,7 @@ const Home = (props: Props) => {
         <ThisDay />
         <ThisDayInfoLR />
       </div>
+      <Days />
     </div>
   );
 };
