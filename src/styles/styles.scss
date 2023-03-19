@@ -1,4 +1,4 @@
-@use "../../node_modules/sass-rem/" as to;
+@use "~/node_modules/sass-rem/" as to;
 
 @use "./reset";
 @use "./variables";
@@ -10,6 +10,12 @@ $border: to.rem(1px solid #ccc);
 body {
   // font-family: sans-serif;
   font-family: "Amatic SC", cursive;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
 }
 
 .container {

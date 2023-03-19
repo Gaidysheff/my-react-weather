@@ -1,0 +1,55 @@
+@use "~/node_modules/sass-rem/" as to;
+@import "../../../../styles/variables";
+
+.this_day_info {
+  position: relative;
+  padding: 40px;
+  max-width: 750px;
+  width: 100%;
+  background-color: $light-background;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__indicator {
+    margin-right: 20px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 4px 10px -1px rgba(71, 147, 255, 0.2);
+
+    &_name,
+    &_value {
+      font-size: 14px;
+      line-height: 1.22;
+      margin-right: 20px;
+    }
+
+    &_name {
+      color: rgba(147, 156, 176, 1);
+    }
+
+    &_value {
+      color: $light-color;
+    }
+  }
+
+  &__cloud_img {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
