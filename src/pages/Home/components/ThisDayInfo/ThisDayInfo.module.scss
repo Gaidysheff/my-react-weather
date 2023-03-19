@@ -9,6 +9,15 @@
   background-color: $light-background;
   box-shadow: $box-shadow;
   border-radius: $border-radius;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &__left {
+    z-index: 10;
+  }
+  &__right {
+  }
 
   &__item {
     position: relative;
@@ -35,7 +44,6 @@
     &_value {
       font-size: 14px;
       line-height: 1.22;
-      margin-right: 20px;
     }
 
     &_name {
@@ -44,7 +52,13 @@
 
     &_value {
       color: $light-color;
+      z-index: 10;
     }
+  }
+
+  &__empty {
+    width: 20px;
+    height: 38px;
   }
 
   &__cloud_img {

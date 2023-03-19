@@ -1,6 +1,6 @@
 import React from "react";
 import ThisDay from "./components/ThisDay/ThisDay";
-import ThisDayInfo from "./components/ThisDayInfo/ThisDayInfo";
+import ThisDayInfoLR from "./components/ThisDayInfo/ThisDayInfoLR";
 
 import style from "./Home.module.scss";
 
@@ -11,7 +11,7 @@ const Home = (props: Props) => {
     <div className={style.home}>
       <div className={style.wrapper}>
         <ThisDay />
-        <ThisDayInfo />
+        <ThisDayInfoLR />
       </div>
     </div>
   );
