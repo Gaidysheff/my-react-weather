@@ -59,3 +59,40 @@
     box-shadow: rgba(147, 144, 144, 0.28);
   }
 }
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: to.rem(7px);
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__tab,
+  &__cancel {
+    box-shadow: to.rem(2px 5px 25px -3px rgba(180, 180, 180, 0.25));
+    border-radius: to.rem(5px);
+    padding: to.rem(9px 20px);
+    background-color: $light-background;
+    margin-right: to.rem(15px);
+    color: $light-color;
+    font-style: to.rem(18px);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__tab {
+    &:active {
+      background-color: $primary-color;
+      color: #fff;
+    }
+  }
+
+  &__cancel {
+    margin-right: 0;
+    align-self: center;
+  }
+}

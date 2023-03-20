@@ -1,4 +1,7 @@
+@use "~/node_modules/sass-rem/" as to;
+
 .wrapper {
   display: flex;
   justify-content: space-between;
+  margin-bottom: to.rem(50px);
 }
