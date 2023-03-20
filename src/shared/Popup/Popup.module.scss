@@ -1,0 +1,83 @@
+@use "~/node_modules/sass-rem/" as to;
+@import "../../styles/variables";
+
+.popup {
+  position: absolute;
+  top: 25%;
+  left: to.rem(calc(50% - 325px));
+  z-index: 101;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: to.rem(40px);
+  max-width: to.rem(750px);
+  background-color: $light-background;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+
+  &__close {
+    position: absolute;
+    top: to.rem(20px);
+    right: to.rem(20px);
+
+    svg {
+      transition: 0.3s;
+    }
+
+    &:hover {
+      svg {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  &__temp {
+    font-size: to.rem(60px);
+    font-weight: bold;
+    color: $primary-color;
+    margin-bottom: to.rem(12px);
+  }
+
+  &__day {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+
+  &__date {
+    font-size: to.rem(25px);
+    line-height: 1.2;
+    margin-bottom: to.rem(12px);
+  }
+
+  &__img {
+    margin-bottom: to.rem(12px);
+
+    svg {
+      width: to.rem(53px);
+      height: to.rem(53px);
+    }
+  }
+
+  &__today {
+    font-size: to.rem(25px);
+    color: $light-color;
+    margin-bottom: to.rem(12px);
+  }
+
+  &__bottom_time,
+  &__bottom_city {
+    color: $base-color;
+    font-size: to.rem(18px);
+  }
+}
+
+.blur {
+  position: absolute;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}

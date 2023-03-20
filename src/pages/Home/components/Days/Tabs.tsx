@@ -23,7 +23,7 @@ const Tabs = (props: Props) => {
     <div className={style.tabs}>
       <div className={style.tabs__wrapper}>
         {tabs.map((tab) => (
-          <div className={style.tabs__tab} key={tab.value}>
+          <div className={style.tabs__tab + " " + style.active} key={tab.value}>
             {tab.value}
           </div>
         ))}

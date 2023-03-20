@@ -34,11 +34,12 @@
   }
 
   &__bottom_block {
-    padding-top: to.rem(40px);
-    &__bottom_time,
-    &__bottom_city {
-      color: $base-color;
-      font-size: to.rem(25px);
-    }
+    padding-top: to.rem(25px);
+  }
+
+  &__bottom_time,
+  &__bottom_city {
+    color: $base-color;
+    font-size: to.rem(25px);
   }
 }
