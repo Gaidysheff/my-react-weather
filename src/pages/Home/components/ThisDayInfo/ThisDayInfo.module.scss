@@ -3,8 +3,8 @@
 
 .this_day_info {
   position: relative;
-  padding: 40px;
-  max-width: 750px;
+  padding: to.rem(40px);
+  max-width: to.rem(750px);
   width: 100%;
   background-color: $light-background;
   box-shadow: $box-shadow;
@@ -21,14 +21,14 @@
     position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: to.rem(20px);
     &:last-of-type {
       margin-bottom: 0;
     }
   }
 
   &__indicator {
-    margin-right: 20px;
+    margin-right: to.rem(20px);
     width: 38px;
     height: 38px;
     display: flex;
@@ -36,11 +36,11 @@
     justify-content: center;
     background-color: #fff;
     border-radius: 50%;
-    box-shadow: 1px 4px 10px -1px rgba(71, 147, 255, 0.2);
+    box-shadow: to.rem(1px 4px 10px -1px rgba(71, 147, 255, 0.2));
 
     &_name,
     &_value {
-      font-size: 14px;
+      font-size: to.rem(14px);
       line-height: 1.22;
     }
 
@@ -55,8 +55,8 @@
   }
 
   &__empty {
-    width: 20px;
-    height: 38px;
+    width: to.rem(20px);
+    height: to.rem(38px);
   }
 
   &__cloud_img {

@@ -30,14 +30,14 @@ const Header = (props: Props) => {
 
   return (
     <header className={style.header}>
-      <div className={style.wrapper}>
-        <div className={style.logo}>
+      <div className={style.header__wrapper}>
+        <div className={style.header__logo}>
           <GlobalSvgSelector id="header-logo" />
         </div>
-        <div className={style.title}>React weather</div>
+        <div className={style.header__title}>React weather</div>
       </div>
-      <div className={style.wrapper}>
-        <div className={style.change_theme}>
+      <div className={style.header__wrapper}>
+        <div className={style.header__change_theme}>
           <GlobalSvgSelector id="change-theme" />
         </div>
         <Select

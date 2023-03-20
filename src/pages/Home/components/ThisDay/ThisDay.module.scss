@@ -2,42 +2,43 @@
 @import "../../../../styles/variables";
 
 .this_day {
-  padding: 20px;
-  max-width: 400px;
+  padding: to.rem(20px);
+  max-width: to.rem(400px);
   width: 100%;
-  align-content: center;
   background-color: $light-background;
   box-shadow: $box-shadow;
   border-radius: $border-radius;
-}
 
-.top_block {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 30px;
-  svg {
-    width: 119px;
-    height: 119px;
+  &__top_block {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+    margin-bottom: to.rem(30px);
+
+    svg {
+      width: to.rem(119px);
+      height: to.rem(119px);
+    }
   }
-}
 
-.this_temp {
-  font-size: 96px;
-  font-weight: bold;
-  color: $primary-color;
-}
+  &__this_temp {
+    font-size: to.rem(96px);
+    font-weight: bold;
+    color: $primary-color;
+  }
 
-.this_today {
-  font-size: 40px;
-  color: $light-color;
-}
+  &__this_today {
+    font-size: to.rem(40px);
+    color: $light-color;
+  }
 
-.bottom_block {
-  .bottom_time,
-  .bottom_city {
-    color: $base-color;
-    font-size: 25px;
+  &__bottom_block {
+    padding-top: to.rem(40px);
+    &__bottom_time,
+    &__bottom_city {
+      color: $base-color;
+      font-size: to.rem(25px);
+    }
   }
 }

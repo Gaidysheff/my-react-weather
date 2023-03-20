@@ -19,11 +19,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: to.rem(1200px);
   margin: 0 auto;
-  padding-top: 20px;
-}
-
-#app {
-  // background-color: #cbeaa8;
+  padding-top: to.rem(20px);
 }
