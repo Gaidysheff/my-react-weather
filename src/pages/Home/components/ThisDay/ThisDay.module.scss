@@ -5,7 +5,7 @@
   padding: to.rem(20px);
   max-width: to.rem(400px);
   width: 100%;
-  background-color: $light-background;
+  background-color: var(#{--components-background-default});
   box-shadow: $box-shadow;
   border-radius: $border-radius;
 
@@ -30,7 +30,7 @@
 
   &__this_today {
     font-size: to.rem(40px);
-    color: $light-color;
+    color: var(#{--text-color-default});
   }
 
   &__bottom_block {
