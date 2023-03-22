@@ -15,8 +15,13 @@ type Response = {
 
 const initialState: CurrentWeather = {
   weather: {
+    // current_weather: {
+    //   hourly: {
+    //     temperature_2m: 15,
+    //   },
+    // },
     main: {
-      temp: 0,
+      temp: 10,
     },
   },
   isLoading: false,

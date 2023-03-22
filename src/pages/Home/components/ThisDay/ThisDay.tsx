@@ -14,7 +14,8 @@ const ThisDay = (weather: Props) => {
       <div className={style.this_day__top_block}>
         <div className={style.this_day__this_temperature}>
           <div className={style.this_day__this_temp}>
-            {weather.weather.main.temp}&deg;
+            {/* {weather.weather.current_weather.hourly.temperature_2m}&deg; */}
+            {Math.floor(weather.weather.main.temp)}&deg;
           </div>
           <div className={style.this_day__this_today}>Today</div>
         </div>
