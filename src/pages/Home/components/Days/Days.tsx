@@ -65,22 +65,16 @@ const Days = (props: Props) => {
       temp_night: "+15",
       info: "Rain",
     },
-    {
-      day: "Fri",
-      day_info: "3 Sept",
-      icon_id: "rain",
-      temp_day: "+18",
-      temp_night: "+15",
-      info: "Rain",
-    },
   ];
   return (
     <>
-      <Tabs />
-      <div className={style.days}>
-        {days.map((day: Day) => (
-          <Card day={day} key={day.day} />
-        ))}
+      <div className={style.container}>
+        <Tabs />
+        <div className={style.days}>
+          {days.map((day: Day) => (
+            <Card day={day} key={day.day} />
+          ))}
+        </div>
       </div>
     </>
   );

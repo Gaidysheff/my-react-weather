@@ -63,5 +63,48 @@
     position: absolute;
     top: 0;
     right: 0;
+    width: 50%;
+  }
+}
+
+/*! ============ 1250 ============= */
+
+@media (max-width: 1250px) {
+  .this_day_info {
+    margin-right: to.rem(20px);
+  }
+}
+
+/*! ============ 700 ============= */
+
+@media (max-width: 700px) {
+  .this_day_info {
+    padding: to.rem(20px);
+    width: 90%;
+    margin: to.rem(0 20px);
+  }
+}
+
+/*! ============ 400 ============= */
+
+@media (max-width: 400px) {
+  .this_day_info {
+    padding: to.rem(10px);
+    width: 90%;
+    margin: to.rem(0 10px);
+    &__indicator {
+      margin-right: to.rem(10px);
+      width: 25px;
+      height: 25px;
+      &_name,
+      &_value {
+        font-size: to.rem(calc(14px * 0.8));
+        line-height: calc(1.22 * 0.8);
+      }
+    }
+    &__empty {
+      width: to.rem(10px);
+      height: to.rem(25px);
+    }
   }
 }

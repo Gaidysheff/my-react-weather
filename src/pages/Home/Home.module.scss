@@ -5,3 +5,14 @@
   justify-content: space-between;
   margin-bottom: to.rem(50px);
 }
+
+/*! ============ 700 ============= */
+
+@media (max-width: 700px) {
+  .wrapper {
+    display: grid;
+    grid-template: 2fr / 1fr;
+    gap: 20px;
+    justify-items: center;
+  }
+}

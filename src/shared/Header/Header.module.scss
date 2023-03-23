@@ -35,3 +35,44 @@
     cursor: pointer;
   }
 }
+
+/*! ============ 600 ============= */
+
+@media (max-width: 600px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+
+    &__wrapper {
+      margin-bottom: to.rem(20px);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+/*! ============ 400 ============= */
+
+@media (max-width: 400px) {
+  .header {
+    &__title {
+      font-size: to.rem(15px);
+    }
+
+    &__logo {
+      margin-right: to.rem(20px);
+
+      svg {
+        width: to.rem(45px);
+        height: to.rem(45px);
+      }
+    }
+    &__change_theme {
+      margin-right: 0;
+      svg {
+        width: 70%;
+      }
+    }
+  }
+}
