@@ -4,18 +4,17 @@ import { Weather } from "../../../../store/types/types";
 
 import style from "./ThisDay.module.scss";
 
-type Props = {
+interface Props {
   weather: Weather;
-};
+}
 
-const ThisDay = (weather: Props) => {
+const ThisDay = ({ weather }: Props) => {
   return (
     <div className={style.this_day}>
       <div className={style.this_day__top_block}>
         <div className={style.this_day__this_temperature}>
           <div className={style.this_day__this_temp}>
-            {/* {weather.weather.current_weather.hourly.temperature_2m}&deg; */}
-            {Math.floor(weather.weather.main.temp)}&deg;
+            {Math.floor(weather.main.temp)}&deg;
           </div>
           <div className={style.this_day__this_today}>Today</div>
         </div>

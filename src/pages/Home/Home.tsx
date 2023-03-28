@@ -8,19 +8,19 @@ import ThisDayInfoLR from "./components/ThisDayInfo/ThisDayInfoLR";
 
 import style from "./Home.module.scss";
 
-type Props = {};
+interface Props {}
 
 const Home = (props: Props) => {
   const dispatch = useCustomDispatch();
 
+  //   const { weather } = useCustomSelector(
+  //     (state) => state.currentWeatherSliceReducer
+  // );
   const { weather } = useCustomSelector(selectCurrentWeatherData);
 
-  //   (state) => state.currentWeatherSliceReducer
-  // );
-
   useEffect(() => {
-    dispatch(fetchCurrentWeather("London"));
-  });
+    dispatch(fetchCurrentWeather("Moscow"));
+  }, []);
   return (
     <div className={style.home}>
       <div className={style.wrapper}>
