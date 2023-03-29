@@ -19,7 +19,7 @@ const Days = (props: Props) => {
   const days: Day[] = [
     {
       day: "Today",
-      day_info: "28 Aug",
+      day_info: "30 March",
       icon_id: "sun",
       temp_day: "+18",
       temp_night: "+15",
@@ -27,7 +27,7 @@ const Days = (props: Props) => {
     },
     {
       day: "Tomorrow",
-      day_info: "29 Aug",
+      day_info: "31 March",
       icon_id: "small_rain_sun",
       temp_day: "+18",
       temp_night: "+15",
@@ -35,7 +35,7 @@ const Days = (props: Props) => {
     },
     {
       day: "Mon",
-      day_info: "30 Aug",
+      day_info: "1 April",
       icon_id: "small_rain",
       temp_day: "+18",
       temp_night: "+15",
@@ -43,7 +43,7 @@ const Days = (props: Props) => {
     },
     {
       day: "Tue",
-      day_info: "31 Aug",
+      day_info: "2 April",
       icon_id: "mainly_cloudy",
       temp_day: "+18",
       temp_night: "+15",
@@ -51,7 +51,7 @@ const Days = (props: Props) => {
     },
     {
       day: "Wed",
-      day_info: "1 Sept",
+      day_info: "3 April",
       icon_id: "mainly_cloudy",
       temp_day: "+18",
       temp_night: "+15",
@@ -59,7 +59,7 @@ const Days = (props: Props) => {
     },
     {
       day: "Thu",
-      day_info: "2 Sept",
+      day_info: "4 April",
       icon_id: "rain",
       temp_day: "+18",
       temp_night: "+15",

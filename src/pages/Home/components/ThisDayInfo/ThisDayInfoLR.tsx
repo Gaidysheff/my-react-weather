@@ -4,8 +4,11 @@ import style from "./ThisDayInfo.module.scss";
 import cloud from "../../../../assets/images/image_cloud.svg";
 import ThisDayInfoItemLeft from "./ThisDayInfoItemLeft";
 import ThisDayInfoItemRight from "./ThisDayInfoItemRight";
+import { Weather } from "../../../../store/types/types";
 
-interface Props {}
+interface Props {
+  weather: Weather;
+}
 
 export interface ItemLeft {
   icon_id: string;
@@ -14,30 +17,34 @@ export interface ItemLeft {
 
 export interface ItemRight {
   icon_id: string;
-  value: string;
+  value: any;
 }
 
-const ThisDayInfo = (props: Props) => {
+const ThisDayInfo = ({ weather }: Props) => {
   const items = [
     {
       icon_id: "temp",
       name: "Temperature",
-      value: "20° feels like 17°",
+      value: `${Math.floor(weather.main.temp)}° feels like ${Math.floor(
+        weather.main.feels_like
+      )}°`,
     },
     {
       icon_id: "pressure",
       name: "Pressure",
-      value: "765 mmHg - normal",
+      value: `${Math.floor(
+        weather.main.pressure * 0.75006375541921
+      )} mmHg - normal`,
     },
     {
       icon_id: "precip",
       name: "Precipitation",
-      value: "No precipitation",
+      value: weather.weather[0].description,
     },
     {
       icon_id: "wind",
       name: "Wind",
-      value: "3 m/s southwest - light breeze",
+      value: `${weather.wind.speed} m/s and direction ${weather.wind.deg}°`,
     },
   ];
   return (

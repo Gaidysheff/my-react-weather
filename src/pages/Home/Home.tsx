@@ -13,9 +13,6 @@ interface Props {}
 const Home = (props: Props) => {
   const dispatch = useCustomDispatch();
 
-  //   const { weather } = useCustomSelector(
-  //     (state) => state.currentWeatherSliceReducer
-  // );
   const { weather } = useCustomSelector(selectCurrentWeatherData);
 
   useEffect(() => {
@@ -25,7 +22,7 @@ const Home = (props: Props) => {
     <div className={style.home}>
       <div className={style.wrapper}>
         <ThisDay weather={weather} />
-        <ThisDayInfoLR />
+        <ThisDayInfoLR weather={weather} />
       </div>
       <Days />
     </div>
