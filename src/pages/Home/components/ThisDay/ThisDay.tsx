@@ -1,8 +1,10 @@
 import React from "react";
 import GlobalSvgSelector from "../../../../assets/icons/global/GlobalSvgSelector";
 import { Weather } from "../../../../store/types/types";
+import newSelection from "../../../../shared/Header/Header";
 
 import style from "./ThisDay.module.scss";
+import Clock from "../Clock/Clock";
 
 interface Props {
   weather: Weather;
@@ -22,7 +24,7 @@ const ThisDay = ({ weather }: Props) => {
       </div>
       <div className={style.this_day__bottom_block}>
         <div className={style.this_day__bottom_time}>
-          Time: <span>21:54</span>
+          <Clock />
         </div>
         <div className={style.this_day__bottom_city}>
           City: <span>Eburg</span>

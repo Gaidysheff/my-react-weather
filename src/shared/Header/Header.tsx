@@ -4,6 +4,7 @@ import GlobalSvgSelector from "../../assets/icons/global/GlobalSvgSelector";
 import { Theme } from "../../context/ThemeContext";
 import style from "./Header.module.scss";
 import { useTheme } from "../../hooks/useTheme";
+import { useState } from "react";
 
 type Props = {};
 
@@ -37,6 +38,12 @@ const Header = (props: Props) => {
     theme.changeTheme(theme.theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT);
   }
 
+  const [selected, setSelected] = useState(null);
+
+  const handleChange = (selectedOption: any) => {
+    setSelected(selectedOption.label);
+  };
+
   return (
     <header className={style.header}>
       <div className={style.header__wrapper}>
@@ -53,8 +60,11 @@ const Header = (props: Props) => {
           defaultValue={options[0]}
           styles={colourStyles}
           options={options}
+          onChange={handleChange}
+          autoFocus={true}
         />
       </div>
+      <>this's for test / You've selected: {selected}</>
     </header>
   );
 };
