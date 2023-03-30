@@ -5,6 +5,7 @@ import newSelection from "../../../../shared/Header/Header";
 
 import style from "./ThisDay.module.scss";
 import Clock from "../Clock/Clock";
+import Parent from "../../../../test/Parent";
 
 interface Props {
   weather: Weather;
@@ -28,6 +29,7 @@ const ThisDay = ({ weather }: Props) => {
         </div>
         <div className={style.this_day__bottom_city}>
           City: <span>Eburg</span>
+          <Parent />
         </div>
       </div>
     </div>

@@ -6,7 +6,9 @@ import style from "./Header.module.scss";
 import { useTheme } from "../../hooks/useTheme";
 import { useState } from "react";
 
-type Props = {};
+type Props = {
+  parentCallback: Function;
+};
 
 const Header = (props: Props) => {
   const theme = useTheme();
@@ -38,10 +40,10 @@ const Header = (props: Props) => {
     theme.changeTheme(theme.theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT);
   }
 
-  const [selected, setSelected] = useState(null);
+  const [selected, parentCallback] = useState(null);
 
-  const handleChange = (selectedOption: any) => {
-    setSelected(selectedOption.label);
+  const onChange = (selectedOption: any) => {
+    props.parentCallback(selectedOption.label);
   };
 
   return (
@@ -60,11 +62,14 @@ const Header = (props: Props) => {
           defaultValue={options[0]}
           styles={colourStyles}
           options={options}
-          onChange={handleChange}
+          onChange={onChange}
           autoFocus={true}
+          value={options.find((x) => x.label === selected)}
         />
       </div>
-      <>this's for test / You've selected: {selected}</>
+      {/* <>this's for test / You've selected: {selected}</>
+      <br />
+      <>Another check: {JSON.stringify(selected, null, 2)}</> */}
     </header>
   );
 };

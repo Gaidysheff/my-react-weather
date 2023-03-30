@@ -1,9 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL:
-    // "https://api.openweathermap.org/data/2.5/weather?q=Moscow&units=metric&appid=1554bf62de1c14b29324dc450618b0ca",
-    process.env.REACT_APP_API_UR,
+  baseURL: process.env.REACT_APP_API_URL,
 });
 
 api.interceptors.request.use((config) => {

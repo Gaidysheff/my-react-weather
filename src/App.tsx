@@ -10,19 +10,30 @@ import "./styles/styles.scss";
 
 type Props = {};
 
-const App = (props: Props) => {
-  return (
-    <>
-      {/* <Popup /> */}
-      <div className="container">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/statistics" element={<MonthlyStatistics />} />
-        </Routes>
+class App extends React.Component {
+  state = {
+    selectedCity: "",
+  };
+
+  handleCallback = (selected: any) => {
+    this.setState({ selectedCity: selected });
+  };
+
+  render() {
+    const { selectedCity } = this.state;
+    return (
+      <div>
+        <h1> Вытягиваю selected city:{selectedCity}</h1>
+        <div className="container">
+          <Header parentCallback={this.handleCallback} />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/statistics" element={<MonthlyStatistics />} />
+          </Routes>
+        </div>
       </div>
-    </>
-  );
-};
+    );
+  }
+}
 
 export default App;
