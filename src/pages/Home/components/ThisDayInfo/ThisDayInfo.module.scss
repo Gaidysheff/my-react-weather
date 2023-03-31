@@ -1,5 +1,5 @@
 @use "~/node_modules/sass-rem/" as to;
-@import "../../../../styles/variables";
+@import "../../../../styles/variables.module";
 
 .this_day_info {
   position: relative;

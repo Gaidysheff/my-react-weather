@@ -1,5 +1,5 @@
 @use "~/node_modules/sass-rem/" as to;
-@import "../../styles/variables";
+@import "../../styles/variables.module";
 
 .header {
   display: flex;

@@ -6,7 +6,7 @@ import MonthlyStatistics from "./pages/MonthlyStatistics/MonthlyStatistics";
 import Header from "./shared/Header/Header";
 import Popup from "./shared/Popup/Popup";
 
-import "./styles/styles.scss";
+import "./styles/styles.module.scss";
 
 type Props = {};
 
